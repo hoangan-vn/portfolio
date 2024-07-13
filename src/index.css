@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "JosefinSans";
+  src: local("JosefinSans"), url("/fonts/JosefinSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url("/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@layer base {
+
+  html,
+  body {
+    @apply text-black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label {
+    @apply font-heading;
+  }
+
+  div,
+  span,
+  li,
+  p,
+  input,
+  button,
+  a {
+    @apply font-body;
+  }
+
+  blockquote,
+  dl,
+  dd,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  figure,
+  p,
+  pre {
+    margin: 0;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  user-select: none;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, rgba(170, 54, 124, 0.5), rgba(74, 47, 189, 0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-100 {
+  background: linear-gradient(to right, rgba(238, 84, 177, 0.5), rgba(125, 98, 248, 0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

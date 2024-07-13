@@ -1,0 +1,30 @@
+[
+  {
+    "leading": "/src/assets/images/future.png",
+    "title": "Future.",
+    "time": "Mar 2023 - Jun 2023",
+    "link": "https://github.com/hoangan-vn/future",
+    "description": "This is a website for selling decorations, where customers can find unique and beautiful items to decorate their homes. On the website, we offer a wide range of decorative accessories such as paintings, decorative lights, and much more.",
+    "technologies": [
+      "Typescript",
+      "ReactJs",
+      "Tailwind CSS",
+      "Redux",
+      "ExpressJs",
+      "MongoDB",
+      "Swagger"
+    ]
+  },
+  {
+    "leading": "/src/assets/images/flutter-intern.png",
+    "title": "Flutter Intern Project",
+    "time": "Dec 2023 - Mar 2024",
+    "link": "https://github.com/hoangan-vn/flutter-intern",
+    "description": "This is a tracking application for pregnant mothers, looking up knowledge about taking care of their children from the time they are pregnant until their children grow up.",
+    "technologies": [
+      "Dart",
+      "Flutter",
+      "Firebase"
+    ]
+  }
+]

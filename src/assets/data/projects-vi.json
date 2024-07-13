@@ -1,0 +1,30 @@
+[
+  {
+    "leading": "/src/assets/images/future.png",
+    "title": "Future.",
+    "time": "03/2023 - 06/2023",
+    "link": "https://github.com/hoangan-vn/future",
+    "description": "Đây là một trang web bán đồ trang trí, nơi khách hàng có thể tìm thấy những món đồ độc đáo và đẹp để trang trí ngôi nhà của họ. Trên trang web, chúng tôi cung cấp một loạt các phụ kiện trang trí như tranh vẽ, đèn trang trí và nhiều sản phẩm khác.",
+    "technologies": [
+      "Typescript",
+      "ReactJs",
+      "Tailwind CSS",
+      "Redux",
+      "ExpressJs",
+      "MongoDB",
+      "Swagger"
+    ]
+  },
+  {
+    "leading": "/src/assets/images/flutter-intern.png",
+    "title": "Flutter Intern Project",
+    "time": "12/2023 - 03/2024",
+    "link": "https://github.com/hoangan-vn/flutter-intern",
+    "description": "Đây là một ứng dụng theo dõi cho các bà mẹ mang thai, cung cấp thông tin về cách chăm sóc trẻ từ khi chị mang thai cho đến khi trẻ lớn lên.",
+    "technologies": [
+      "Dart",
+      "Flutter",
+      "Firebase"
+    ]
+  }
+]

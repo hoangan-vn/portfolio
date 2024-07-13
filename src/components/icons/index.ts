@@ -1,0 +1,12 @@
+export { default as LightIcon } from './LightIcon';
+export { default as DarkIcon } from './DarkIcon';
+export { default as SystemIcon } from './SystemIcon';
+export { default as PauseIcon } from './PauseIcon';
+export { default as PlayIcon } from './PlayIcon';
+export { default as CopyIcon } from './CopyIcon';
+export { default as DownloadIcon } from './DownloadIcon';
+export { default as FileIcon } from './FileIcon';
+export { default as LinkedInIcon } from './LinkedInIcon';
+export { default as MailIcon } from './MailIcon';
+export { default as PhoneIcon } from './PhoneIcon';
+export { default as GithubIcon } from './GithubIcon';
