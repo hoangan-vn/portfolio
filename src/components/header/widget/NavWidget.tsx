@@ -27,22 +27,22 @@ const NavWidget: FC = (): JSX.Element => {
 
   return (
     <div className='flex justify-around items-center mr-4'>
-      <a className='px-3 cursor-pointer dark:text-white' onClick={(e) => handleNavigation(e)}>
+      <a className='px-3 cursor-pointer dark:text-white hover:underline' onClick={(e) => handleNavigation(e)}>
         {t('nav-home')}
       </a>
-      <a className='px-3 cursor-pointer dark:text-white' onClick={(e) => handleNavigation(e, 'about')}>
+      <a className='px-3 cursor-pointer dark:text-white hover:underline' onClick={(e) => handleNavigation(e, 'about')}>
         {t('nav-about')}
       </a>
-      <a className='px-3 cursor-pointer dark:text-white' onClick={(e) => handleNavigation(e, 'skills')}>
+      <a className='px-3 cursor-pointer dark:text-white hover:underline' onClick={(e) => handleNavigation(e, 'skills')}>
         {t('nav-skills')}
       </a>
-      <a className='px-3 cursor-pointer dark:text-white' onClick={(e) => handleNavigation(e, 'experience')}>
+      <a className='px-3 cursor-pointer dark:text-white hover:underline' onClick={(e) => handleNavigation(e, 'experience')}>
         {t('nav-experience')}
       </a>
-      <a className='px-3 cursor-pointer dark:text-white' onClick={(e) => handleNavigation(e, 'projects')}>
+      <a className='px-3 cursor-pointer dark:text-white hover:underline' onClick={(e) => handleNavigation(e, 'projects')}>
         {t('nav-projects')}
       </a>
-      <a className='px-3 cursor-pointer dark:text-white' onClick={(e) => handleNavigation(e, 'contact')}>
+      <a className='px-3 cursor-pointer dark:text-white hover:underline' onClick={(e) => handleNavigation(e, 'contact')}>
         {t('nav-contact')}
       </a>
     </div>

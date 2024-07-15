@@ -1,10 +1,8 @@
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
 
-import { RootState } from '~/app/store';
 import { CopyIcon, LinkedInIcon } from '~/components/icons';
-import { ThemeMode } from '~/constants/enum';
+import { useDarkThemeDetector } from '~/hooks/useDarkThemeSelector';
 import { copy } from '~/utils/text.util';
 import { TooltipWidget } from '~/widgets';
 
@@ -13,11 +11,7 @@ const LinkedInWidget: FC = (): JSX.Element => {
   const [linkedIn] = useState<string>('linkedin');
   const { t } = useTranslation();
 
-  const isDarkTheme = (): boolean => {
-    const currentTheme = useSelector((state: RootState) => state.theme.theme);
-    const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    return currentTheme === ThemeMode.dark || (currentTheme === ThemeMode.system && darkQuery.matches);
-  };
+  const isDarkTheme = useDarkThemeDetector();
 
   const handleOpen = () => {
     window.open(linkedIn, '_blank');
@@ -29,7 +23,7 @@ const LinkedInWidget: FC = (): JSX.Element => {
   return (
     <div className='flex justify-start items-center gap-2'>
       <h2 className='flex items-center justify-center gap-1'>
-        <LinkedInIcon width={20} height={20} color={isDarkTheme() ? '#fff' : '#24292F'} />
+        <LinkedInIcon width={20} height={20} color={isDarkTheme ? '#fff' : '#24292F'} />
         <p className='text-center font-semibold dark:text-white'>
           {t('common-linkedin')}
           {t('common-colon')}
