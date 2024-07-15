@@ -38,17 +38,17 @@ const Footer: FC = (): JSX.Element => {
             {`${t('footer-terms-condition')} & ${t('footer-privacy-policy')}`}
           </h5>
           <ul className='space-y-5 text-heading-9 whitespace-nowrap dark:text-white'>
-            <li className='cursor-pointer' onClick={() => navigate(APP_PATH['terms-condition'])}>
+            <li className='cursor-pointer hover:underline' onClick={() => navigate(APP_PATH['terms-condition'])}>
               {t('footer-terms-condition')}
             </li>
-            <li className='cursor-pointer' onClick={() => navigate(APP_PATH['privacy-policy'])}>
+            <li className='cursor-pointer hover:underline' onClick={() => navigate(APP_PATH['privacy-policy'])}>
               {t('footer-privacy-policy')}
             </li>
           </ul>
         </div>
 
         <div className='flex flex-col gap-0 shrink-0'>
-          <h5 className='text-xl leading-[35px] font-semibold dark:text-white'>{t('footer-follow-us')}</h5>
+          <h5 className='text-xl leading-[35px] font-semibold dark:text-white'>{t('footer-follow')}</h5>
           <div className='relative w-[400px] h-[300px]'>
             <Suspense
               fallback={

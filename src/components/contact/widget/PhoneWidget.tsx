@@ -1,10 +1,8 @@
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
 
-import { RootState } from '~/app/store';
 import { CopyIcon, PhoneIcon } from '~/components/icons';
-import { ThemeMode } from '~/constants/enum';
+import { useDarkThemeDetector } from '~/hooks/useDarkThemeSelector';
 import { copy, formatVietnamPhoneNumber } from '~/utils/text.util';
 import { TooltipWidget } from '~/widgets';
 
@@ -12,11 +10,7 @@ const PhoneWidget: FC = (): JSX.Element => {
   const [phone] = useState<string>('0779672566');
   const { t } = useTranslation();
 
-  const isDarkTheme = (): boolean => {
-    const currentTheme = useSelector((state: RootState) => state.theme.theme);
-    const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    return currentTheme === ThemeMode.dark || (currentTheme === ThemeMode.system && darkQuery.matches);
-  };
+  const isDarkTheme = useDarkThemeDetector();
 
   const handleCopy = () => {
     copy(phone);
@@ -24,7 +18,7 @@ const PhoneWidget: FC = (): JSX.Element => {
   return (
     <div className='flex justify-start items-center gap-2'>
       <h2 className='flex items-center justify-center gap-1'>
-        <PhoneIcon width={20} height={20} color={isDarkTheme() ? '#fff' : '#24292F'} />
+        <PhoneIcon width={20} height={20} color={isDarkTheme ? '#fff' : '#24292F'} />
         <p className='text-center font-semibold dark:text-white'>
           {t('common-phone')}
           {t('common-colon')}

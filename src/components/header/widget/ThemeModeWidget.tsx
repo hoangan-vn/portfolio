@@ -7,7 +7,7 @@ import { RootState } from '~/app/store';
 import { DarkIcon, LightIcon, SystemIcon } from '~/components/icons';
 import { ThemeMode } from '~/constants/enum';
 import { setTheme } from '~/features/theme/themeSlice';
-import { loadState, removeState } from '~/utils/storage.util';
+import { useDarkThemeDetector } from '~/hooks/useDarkThemeSelector';
 import TooltipWidget from '~/widgets/TooltipWidget';
 
 interface ThemeModeWidgetProps {
@@ -24,6 +24,7 @@ const ThemeModeWidget: FC<ThemeModeWidgetProps> = ({ className }): JSX.Element =
   const buttonRef = useRef<HTMLButtonElement>(null);
   const element = document.documentElement;
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const isDarkTheme = useDarkThemeDetector();
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -31,14 +32,6 @@ const ThemeModeWidget: FC<ThemeModeWidgetProps> = ({ className }): JSX.Element =
     setThemeState(mode);
     dispatch(setTheme(mode));
     setShowPopover(false);
-  };
-
-  const onWindowMatch = () => {
-    if (darkQuery.matches) {
-      element.classList.add('dark');
-    } else {
-      element.classList.remove('dark');
-    }
   };
 
   const handleShow = () => {
@@ -58,7 +51,7 @@ const ThemeModeWidget: FC<ThemeModeWidgetProps> = ({ className }): JSX.Element =
 
   useEffect(() => {
     const handleDarkQueryChange = (e: MediaQueryListEvent) => {
-      if (loadState('theme') === undefined) {
+      if (theme === ThemeMode.system) {
         if (e.matches) {
           element.classList.add('dark');
         } else {
@@ -87,17 +80,10 @@ const ThemeModeWidget: FC<ThemeModeWidgetProps> = ({ className }): JSX.Element =
   }, [showPopover]);
 
   useEffect(() => {
-    switch (theme) {
-      case ThemeMode.dark:
-        element.classList.add('dark');
-        break;
-      case ThemeMode.light:
-        element.classList.remove('dark');
-        break;
-      default:
-        removeState('theme');
-        onWindowMatch();
-        break;
+    if (isDarkTheme) {
+      element.classList.add('dark');
+    } else {
+      element.classList.remove('dark');
     }
   }, [theme]);
 

@@ -10,7 +10,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: Locale.en,
-    lng: loadState<Locale>('language') || Locale.vi,
+    lng: loadState<Locale>('language') || Locale.en,
     backend: {
       loadPath: '/locales/{{lng}}.json'
     },

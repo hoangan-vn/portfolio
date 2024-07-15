@@ -1,11 +1,9 @@
 import clsx from 'clsx';
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import { RootState } from '~/app/store';
 
 import { CopyIcon, MailIcon } from '~/components/icons';
-import { ThemeMode } from '~/constants/enum';
+import { useDarkThemeDetector } from '~/hooks/useDarkThemeSelector';
 import { copy } from '~/utils/text.util';
 import { TooltipWidget } from '~/widgets';
 
@@ -13,11 +11,7 @@ const EmailWidget: FC = (): JSX.Element => {
   const [email] = useState<string>('hoangan072024@gmail.com');
   const { t } = useTranslation();
 
-  const isDarkTheme = (): boolean => {
-    const currentTheme = useSelector((state: RootState) => state.theme.theme);
-    const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    return currentTheme === ThemeMode.dark || (currentTheme === ThemeMode.system && darkQuery.matches);
-  };
+  const isDarkTheme = useDarkThemeDetector();
 
   const handleCopy = () => {
     copy(email);
@@ -26,7 +20,7 @@ const EmailWidget: FC = (): JSX.Element => {
   return (
     <div className='flex justify-start items-center gap-2'>
       <h2 className='flex items-center justify-center gap-1'>
-        <MailIcon width={20} height={20} color={isDarkTheme() ? '#fff' : '#24292F'} />
+        <MailIcon width={20} height={20} color={isDarkTheme ? '#fff' : '#24292F'} />
         <p className='text-center font-semibold dark:text-white'>
           {t('common-email')}
           {t('common-colon')}
