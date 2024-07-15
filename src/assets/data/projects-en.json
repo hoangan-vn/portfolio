@@ -1,6 +1,6 @@
 [
   {
-    "leading": "/src/assets/images/future.png",
+    "leading": "future",
     "title": "Future.",
     "time": "Mar 2023 - Jun 2023",
     "link": "https://github.com/hoangan-vn/future",
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "leading": "/src/assets/images/flutter-intern.png",
+    "leading": "flutter-intern",
     "title": "Flutter Intern Project",
     "time": "Dec 2023 - Mar 2024",
     "link": "https://github.com/hoangan-vn/flutter-intern",

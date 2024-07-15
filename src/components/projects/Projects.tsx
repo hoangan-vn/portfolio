@@ -6,6 +6,8 @@ import projectsDataEn from '~/assets/data/projects-en.json';
 import projectsDataVi from '~/assets/data/projects-vi.json';
 import { Locale } from '~/constants/enum';
 import { RootState } from '~/app/store';
+import future from '~/assets/images/future.png';
+import flutter from '~/assets/images/flutter-intern.png';
 
 import { ProjectItemWidget } from './widget';
 
@@ -22,7 +24,7 @@ const Projects: FC = (): JSX.Element => {
       <div className='flex flex-col gap-3 items-start w-full'>
         {data.map((project) => (
           <ProjectItemWidget
-            leading={project.leading}
+            leading={project.leading == 'future' ? future : flutter}
             title={project.title}
             time={project.time}
             link={project.link}
