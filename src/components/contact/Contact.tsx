@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { GithubProfileWidget, ResumeWidget, EmailWidget, PhoneWidget, LinkedInWidget } from './widget';
+import { GithubProfileWidget, ResumeWidget, EmailWidget, PhoneWidget} from './widget';
 
 const Contact: FC = (): JSX.Element => {
   const { t } = useTranslation();
