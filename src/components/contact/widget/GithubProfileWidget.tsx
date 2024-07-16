@@ -7,17 +7,17 @@ import { copy } from '~/utils/text.util';
 import { TooltipWidget } from '~/widgets';
 
 const GithubProfileWidget: FC = (): JSX.Element => {
-  const [github] = useState<string>('https://github.com/hoangan-vn');
+  const [github] = useState<string>('github.com/hoangan-vn');
   const { t } = useTranslation();
 
   const handleOpen = () => {
-    window.open(github, '_blank');
+    window.open('https://' + github, '_blank');
   };
 
   const isDarkTheme = useDarkThemeDetector();
 
   const handleCopy = () => {
-    copy(github);
+    copy('https://' + github);
   };
 
   return (
