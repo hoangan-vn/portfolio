@@ -7,18 +7,17 @@ import { copy } from '~/utils/text.util';
 import { TooltipWidget } from '~/widgets';
 
 const LinkedInWidget: FC = (): JSX.Element => {
-  // TODO: CONNECTING A LINKEDIN ACCOUNT
-  const [linkedIn] = useState<string>('https://www.linkedin.com/in/hoangan-vn/');
+  const [linkedIn] = useState<string>('in/hoangan-vn');
   const { t } = useTranslation();
 
   const isDarkTheme = useDarkThemeDetector();
 
   const handleOpen = () => {
-    window.open(linkedIn, '_blank');
+    window.open('https://www.linkedin.com/' + linkedIn, '_blank');
   };
 
   const handleCopy = () => {
-    copy(linkedIn);
+    copy('https://www.linkedin.com/' + linkedIn);
   };
   return (
     <div className='flex justify-start items-center gap-2'>
