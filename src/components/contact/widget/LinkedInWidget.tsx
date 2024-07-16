@@ -8,7 +8,7 @@ import { TooltipWidget } from '~/widgets';
 
 const LinkedInWidget: FC = (): JSX.Element => {
   // TODO: CONNECTING A LINKEDIN ACCOUNT
-  const [linkedIn] = useState<string>('linkedin');
+  const [linkedIn] = useState<string>('https://www.linkedin.com/in/hoangan-vn/');
   const { t } = useTranslation();
 
   const isDarkTheme = useDarkThemeDetector();
