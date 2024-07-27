@@ -1,6 +1,22 @@
 [
   {
-    "leading": "Dec 2023 - Feb 2024 (4 months)",
+    "leading": "Feb 2023 - Oct 2023 (8 months)",
+    "title": "Web Developer",
+    "jobTitles": "Part-time Dev",
+    "at": "Viethas",
+    "description": "This was a part-time job during my third year, and it ended when I was about to start my internship. Here, I developed websites using React.js, Express.js, and Nest.js.",
+    "technologies": [
+      "ReactJs",
+      "ExpressJs",
+      "NestJs",
+      "Typescript",
+      "MongoDB",
+      "Git",
+      "Trello"
+    ]
+  },
+  {
+    "leading": "Dec 2023 - Mar 2024 (4 months)",
     "title": "Flutter Developer",
     "jobTitles": "Intern",
     "at": "Golden Owl Solution",

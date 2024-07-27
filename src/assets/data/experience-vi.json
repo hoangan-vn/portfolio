@@ -1,5 +1,21 @@
 [
   {
+    "leading": "02/2023 - 10/2023 (8 tháng)",
+    "title": "Web Developer",
+    "jobTitles": "Part-time Dev",
+    "at": "Viethas",
+    "description": "Đây là công việc bán thời gian lúc tôi năm 3 và nó kết thúc khi tôi chuẩn bị đi thực tập. Tại đây tôi phát triển website bằng ReactJs, ExpressJs và  NestJs.",
+    "technologies": [
+      "ReactJs",
+      "ExpressJs",
+      "NestJs",
+      "Typescript",
+      "MongoDB",
+      "Git",
+      "Trello"
+    ]
+  },
+  {
     "leading": "12/2023 - 03/2024 (4 tháng)",
     "title": "Thực tập sinh Flutter Developer",
     "jobTitles": "Thực tập sinh",
