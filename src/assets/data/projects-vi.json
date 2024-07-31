@@ -16,6 +16,22 @@
     ]
   },
   {
+    "leading": "greeny",
+    "title": "Greeny",
+    "time": "10/2023 - 12/2023",
+    "link": "https://github.com/hoangan-vn/greeny",
+    "description": "Chào mừng bạn đến với Greeny - thiên đường của trái cây tươi và tốt cho sức khỏe! Tại Greeny, chúng tôi tự hào cung cấp trái cây sạch, chất lượng cao được lựa chọn cẩn thận từ các trang trại uy tín. Với cam kết cung cấp sản phẩm tươi ngon mỗi ngày, Greeny đảm bảo nguồn dinh dưỡng dồi dào và hương vị thơm ngon. Trải nghiệm sự trong lành của thiên nhiên cùng Greeny và xây dựng lối sống lành mạnh ngay hôm nay!",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "jQuery",
+      "Java",
+      "Spring boot",
+      "MySQL"
+    ]
+  },
+  {
     "leading": "flutter-intern",
     "title": "Flutter Intern Project",
     "time": "12/2023 - 03/2024",
