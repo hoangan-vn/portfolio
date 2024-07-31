@@ -8,6 +8,7 @@ import { Locale } from '~/constants/enum';
 import { RootState } from '~/app/store';
 import future from '~/assets/images/future.png';
 import flutter from '~/assets/images/flutter-intern.png';
+import greeny from '~/assets/images/greeny.png';
 
 import { ProjectItemWidget } from './widget';
 
@@ -15,6 +16,16 @@ const Projects: FC = (): JSX.Element => {
   const { t } = useTranslation();
   const currentLocale = useSelector((state: RootState) => state.localization.locale);
   const data = currentLocale === Locale.en ? projectsDataEn : projectsDataVi;
+  const leadingCase = (leading: string) => {
+    switch (leading) {
+      case 'future':
+        return future;
+      case 'greeny':
+        return greeny;
+      default:
+        return flutter;
+    }
+  };
 
   return (
     <section className='w-screen flex flex-col justify-start items-center p-16 gap-10'>
@@ -24,7 +35,7 @@ const Projects: FC = (): JSX.Element => {
       <div className='flex flex-col gap-3 items-start w-full'>
         {data.map((project) => (
           <ProjectItemWidget
-            leading={project.leading == 'future' ? future : flutter}
+            leading={leadingCase(project.leading)}
             title={project.title}
             time={project.time}
             link={project.link}

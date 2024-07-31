@@ -16,6 +16,22 @@
     ]
   },
   {
+    "leading": "greeny",
+    "title": "Greeny",
+    "time": "10/2023 - 12/2023",
+    "link": "https://github.com/hoangan-vn/greeny",
+    "description": "Welcome to Greeny - the paradise of fresh and healthy fruits! At Greeny, we take pride in offering high-quality, clean fruits carefully selected from reputable farms. With our commitment to providing fresh products every day, Greeny ensures abundant nutrition and delightful flavors. Experience nature's freshness with Greeny and build a healthy lifestyle today!",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "jQuery",
+      "Java",
+      "Spring boot",
+      "MySQL"
+    ]
+  },
+  {
     "leading": "flutter-intern",
     "title": "Flutter Intern Project",
     "time": "Dec 2023 - Mar 2024",
